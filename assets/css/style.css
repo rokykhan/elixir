@@ -1,0 +1,184 @@
+@import url(../css/clash-display.css);
+
+:root{
+    --c-dark:#212529;
+    --c-brand:#4e57d4;
+    --c-brand-light:#6970dd;
+    --c-brand-rba: 78,87,212;
+    --c-body:#727272;
+    --font-base:"ClashDisplay", sans-saerif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease;
+
+
+}
+body{
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+    
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+    font-weight: 600;
+    color: var(--c-dark);
+}
+
+a{
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+
+}
+a:hover{
+ color: var(--c-brand-light);
+
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+
+}
+
+.section-apadding{
+    padding-top: 140px;
+    padding-bottom: 140px;
+
+}
+
+.them-shadow{
+    box-shadow: var(--box-shadow);
+
+}
+
+/* nav start  */
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+.navbar-nav .nav-link{
+    font-weight: 500;
+    color:var(--c-dark);
+}
+.navbar-nav .nav-link.active {
+  color: var(--c-brand);
+}
+.btn{
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+
+}
+.btn-brand{
+    background-color: var(--c-brand);
+    border-color: var(--c-brand);
+    color: white;
+}
+.btn-brand:hover{
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+
+
+}
+
+/* nav end  */
+
+
+
+
+
+
+
+/* hero start  */
+#hero{
+    background: linear-gradient(rgba(var(--c-brand-rba),0.507), rgba(var(--c-brand-rba),0.438)), url(../images/hero-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/* hero end  */
+
+/* section titel start  */
+.section-titel{
+    margin-bottom: 40px;
+}
+.section-titel .line {
+width: 60px;
+height: 4px;
+background-color: var(--c-brand);
+margin:16px auto 24px auto ;
+}
+.section-titel p{
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* section titel end  */
+/* iconbox  */
+.iconbox{
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--c-brand-rba),0.1) ;
+    color: var(--c-brand);
+    font-size: 34px;
+    flex: none;
+
+
+     
+
+}
+
+/* iconbox  */
+
+/* services  */
+.services{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+}
+.services::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: rgba(var(--c-brand-rba), 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: var(--transition);
+}
+.services:hover::after{
+    width: 100%;
+    height: 100%;
+    background: var(--c-brand);
+    z-index: -1;
+
+}
+.services:hover h5, 
+.services:hover p {
+    color: white;
+
+}
+
+.services:hover .iconbox{
+    background-color: rgba(255, 255, 255,0.2);
+    color: white;
+}
+
+/* services  */
+
+/* counter  */
+#counter{
+     background: linear-gradient(rgba(var(--c-brand-rba),0.8), rgba(var(--c-brand-rba),0.8)), url(../images/counter.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* counter  */
